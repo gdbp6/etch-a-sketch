@@ -16,8 +16,10 @@ body {
     border: 1px solid black; 
     box-sizing: border-box;
     flex-grow: 1;
-    
+    filter: 100;
+    opacity: 0.1;
 }
+
 
 button {
     border-radius: 10px;

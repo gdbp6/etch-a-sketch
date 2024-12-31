@@ -18,6 +18,13 @@ grids.forEach((grid) => {
         let b = Math.floor(Math.random() * 256);
         grid.style.backgroundColor = `rgb(${r}, ${g}, ${b})`;
     }, {once : true}); 
+    
+    grid.addEventListener("mouseenter", () => {
+        let currentOpacity = Number(grid.style.opacity);
+        if (currentOpacity < 1) {
+            grid.style.opacity = currentOpacity + 0.1;
+        }
+    })
 })
 
 const btn = document.createElement("button");
@@ -53,6 +60,13 @@ btn.addEventListener("click", () => {
             let b = Math.floor(Math.random() * 256);
             grid.style.backgroundColor = `rgb(${r}, ${g}, ${b})`;
         }, {once : true}); 
+
+        grid.addEventListener("mouseenter", () => {
+            let currentOpacity = Number(grid.style.opacity);
+            if (currentOpacity < 1) {
+                grid.style.opacity = currentOpacity + 0.1;
+            }
+        })
     })
     
 })
