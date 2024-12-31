@@ -12,14 +12,12 @@ const grids = document.querySelectorAll(".squareGrid");
 grids.forEach((grid) => {
     const gridWidth = 560 / squaresPerSide;
     grid.style.width = `${gridWidth}px`;
-})
-
-
-gridContainer.addEventListener("mouseover", (e) => {
-    let r = Math.floor(Math.random() * 256);
-    let g = Math.floor(Math.random() * 256);
-    let b = Math.floor(Math.random() * 256);
-    e.target.style.backgroundColor = `rgb(${r}, ${g}, ${b})`;
+    grid.addEventListener("mouseenter", () => {
+        let r = Math.floor(Math.random() * 256);
+        let g = Math.floor(Math.random() * 256);
+        let b = Math.floor(Math.random() * 256);
+        grid.style.backgroundColor = `rgb(${r}, ${g}, ${b})`;
+    }, {once : true}); 
 })
 
 const btn = document.createElement("button");
@@ -47,8 +45,14 @@ btn.addEventListener("click", () => {
     
     const grids = document.querySelectorAll(".squareGrid");
     grids.forEach((grid) => {
-    const gridWidth = 560 / squaresPerSide;
-    grid.style.width = `${gridWidth}px`;
+        const gridWidth = 560 / squaresPerSide;
+        grid.style.width = `${gridWidth}px`;
+        grid.addEventListener("mouseenter", () => {
+            let r = Math.floor(Math.random() * 256);
+            let g = Math.floor(Math.random() * 256);
+            let b = Math.floor(Math.random() * 256);
+            grid.style.backgroundColor = `rgb(${r}, ${g}, ${b})`;
+        }, {once : true}); 
     })
     
 })
