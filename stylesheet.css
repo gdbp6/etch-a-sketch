@@ -1,0 +1,25 @@
+body {
+    display: flex;
+    flex-direction: column;
+}
+
+#grid-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    width: 560px;
+    height: 560px;
+    margin: 10px auto;
+}
+
+.squareGrid {
+    border: 1px solid black; 
+    box-sizing: border-box;
+    flex-grow: 1;
+    
+}
+
+button {
+    border-radius: 10px;
+    margin: auto;
+}
