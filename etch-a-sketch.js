@@ -16,7 +16,10 @@ grids.forEach((grid) => {
 
 
 gridContainer.addEventListener("mouseover", (e) => {
-    e.target.style.backgroundColor = "yellow";
+    let r = Math.floor(Math.random() * 256);
+    let g = Math.floor(Math.random() * 256);
+    let b = Math.floor(Math.random() * 256);
+    e.target.style.backgroundColor = `rgb(${r}, ${g}, ${b})`;
 })
 
 const btn = document.createElement("button");
